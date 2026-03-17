@@ -132,7 +132,7 @@ struct ContentView: View {
                     aircraftList
                 }
             }
-            .navigationTitle("SkyRadar")
+            .navigationTitle("Contrail")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

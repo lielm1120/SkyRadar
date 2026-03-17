@@ -39,7 +39,7 @@ targets:
     info:
       path: SkyRadar/Info.plist
       properties:
-        CFBundleDisplayName: SkyRadar
+        CFBundleDisplayName: Contrail
         UILaunchScreen: {}
         NSLocationWhenInUseUsageDescription: "SkyRadar uses your location to show nearby aircraft and calculate distances."
         UIApplicationSceneManifest:
