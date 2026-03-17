@@ -3,8 +3,8 @@ import SwiftUI
 /// Main container: full-screen map with a persistent bottom sheet for aircraft list and controls.
 struct ContentView: View {
     @State var viewModel: RadarViewModel
-
     @State private var sheetDetent: PresentationDetent = .fraction(0.30)
+    @State private var navigationPath = NavigationPath()
 
     var body: some View {
         ZStack {
@@ -29,23 +29,18 @@ struct ContentView: View {
                 .presentationCornerRadius(20)
                 .interactiveDismissDisabled()
         }
-        .sheet(isPresented: $viewModel.showDetailSheet) {
-            if let aircraft = viewModel.selectedAircraft {
-                AircraftDetailSheet(
-                    aircraft: aircraft,
-                    engineeringData: viewModel.engineeringData(for: aircraft),
-                    distance: viewModel.distanceToUser(aircraft)
-                )
-                .presentationDetents([.medium, .large])
-                .presentationDragIndicator(.visible)
-                .presentationCornerRadius(20)
-            }
-        }
         .onAppear {
             viewModel.startPolling()
         }
         .onDisappear {
             viewModel.stopPolling()
+        }
+        .onChange(of: viewModel.selectedAircraft?.id) { _, newId in
+            // When an aircraft is selected from the map, push to detail
+            if let newId, navigationPath.isEmpty {
+                sheetDetent = .large
+                navigationPath.append(newId)
+            }
         }
     }
 
@@ -53,7 +48,6 @@ struct ContentView: View {
 
     private var topBar: some View {
         HStack(spacing: 12) {
-            // Status indicator
             HStack(spacing: 6) {
                 if viewModel.isLoading {
                     ProgressView()
@@ -95,11 +89,8 @@ struct ContentView: View {
             }
             .foregroundStyle(.primary)
 
-            // Center button
             Button {
-                withAnimation {
-                    viewModel.centerOnRegion()
-                }
+                withAnimation { viewModel.centerOnRegion() }
             } label: {
                 Image(systemName: "location.viewfinder")
                     .font(.subheadline.weight(.medium))
@@ -115,17 +106,12 @@ struct ContentView: View {
     // MARK: - Aircraft List Sheet
 
     private var aircraftListSheet: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             VStack(spacing: 0) {
-                // Stats header
                 statsHeader
-
                 Divider()
-
-                // Sort & filter bar
                 controlsBar
 
-                // Aircraft list
                 if viewModel.filteredAircraft.isEmpty {
                     emptyState
                 } else {
@@ -142,6 +128,18 @@ struct ContentView: View {
                         Image(systemName: "arrow.clockwise")
                     }
                     .disabled(viewModel.isLoading)
+                }
+            }
+            .navigationDestination(for: String.self) { aircraftId in
+                if let aircraft = viewModel.aircraft.first(where: { $0.id == aircraftId }) {
+                    AircraftDetailSheet(
+                        aircraft: aircraft,
+                        engineeringData: viewModel.engineeringData(for: aircraft),
+                        distance: viewModel.distanceToUser(aircraft)
+                    )
+                } else {
+                    Text("Aircraft no longer in range")
+                        .foregroundStyle(.secondary)
                 }
             }
         }
@@ -203,7 +201,6 @@ struct ContentView: View {
     private var controlsBar: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
-                // Sort picker
                 Menu {
                     ForEach(SortOrder.allCases) { order in
                         Button {
@@ -227,7 +224,6 @@ struct ContentView: View {
                     .foregroundStyle(Color.radarCyan)
                 }
 
-                // Ground filter toggle
                 Button {
                     withAnimation { viewModel.showGroundAircraft.toggle() }
                 } label: {
@@ -257,16 +253,12 @@ struct ContentView: View {
     private var aircraftList: some View {
         List {
             ForEach(viewModel.filteredAircraft) { aircraft in
-                AircraftRow(
-                    aircraft: aircraft,
-                    engineeringData: viewModel.engineeringData(for: aircraft),
-                    distance: viewModel.distanceToUser(aircraft)
-                )
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    withAnimation(.spring(duration: 0.3)) {
-                        viewModel.selectAircraft(aircraft)
-                    }
+                NavigationLink(value: aircraft.id) {
+                    AircraftRow(
+                        aircraft: aircraft,
+                        engineeringData: viewModel.engineeringData(for: aircraft),
+                        distance: viewModel.distanceToUser(aircraft)
+                    )
                 }
                 .listRowInsets(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
             }

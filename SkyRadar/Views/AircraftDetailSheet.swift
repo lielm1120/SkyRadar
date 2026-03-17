@@ -6,41 +6,27 @@ struct AircraftDetailSheet: View {
     let engineeringData: EngineeringData
     var distance: Double?
 
-    @Environment(\.dismiss) private var dismiss
-
     private let twoCol = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 24) {
-                    heroSection
-                    airspeedSection
-                    aerodynamicsSection
-                    energySection
-                    thermalSection
-                    atmosphereSection
-                    altitudeReferencesSection
-                    positionSection
-                    adsbSection
-                }
-                .padding()
-                .padding(.bottom, 30)
+        ScrollView {
+            VStack(spacing: 24) {
+                heroSection
+                airspeedSection
+                aerodynamicsSection
+                energySection
+                thermalSection
+                atmosphereSection
+                altitudeReferencesSection
+                positionSection
+                adsbSection
             }
-            .background(Color(.systemGroupedBackground))
-            .navigationTitle(aircraft.displayCallsign)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { dismiss() } label: {
-                        Image(systemName: "xmark.circle.fill")
-                            .symbolRenderingMode(.hierarchical)
-                            .font(.title3)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-            }
+            .padding()
+            .padding(.bottom, 30)
         }
+        .background(Color(.systemGroupedBackground))
+        .navigationTitle(aircraft.displayCallsign)
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     // MARK: - 1. Hero Section

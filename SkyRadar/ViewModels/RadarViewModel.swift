@@ -24,7 +24,7 @@ final class RadarViewModel {
 
     // Map
     var mapCameraPosition: MapCameraPosition = .automatic
-    var showDetailSheet = false
+    // showDetailSheet removed — detail is pushed via NavigationStack
 
     // MARK: - Private
 
@@ -116,7 +116,6 @@ final class RadarViewModel {
 
     func selectAircraft(_ ac: Aircraft) {
         selectedAircraft = ac
-        showDetailSheet = true
 
         mapCameraPosition = .camera(
             MapCamera(
