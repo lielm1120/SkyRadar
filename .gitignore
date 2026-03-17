@@ -1,0 +1,25 @@
+# Xcode
+build/
+*.xcuserdata/
+DerivedData/
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+Timeline.xctimeline
+PlaygroundPage.swift
+
+# Swift Package Manager
+.build/
+Packages/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+Package.resolved
+
+# Misc
+.DS_Store
+*.swp
+*~

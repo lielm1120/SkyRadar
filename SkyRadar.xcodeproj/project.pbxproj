@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04D44D337CCCE95F237CBF5C /* EngineeringComputerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E8A5A87CCF0CBD75B13C /* EngineeringComputerTests.swift */; };
+		1D34520933C0C96911D21E7E /* AircraftRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F1D0D891A12B2A1B22E3F /* AircraftRow.swift */; };
+		3FDDA56D1CD8E26720BE44DD /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A9DE95A690CB0A5042490 /* Aircraft.swift */; };
+		4801C91AC269E4692D8F9B88 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC74DE5C9CA81ABF68C2450 /* LocationService.swift */; };
+		5FD22EF0DEF0D63B1EBDF22B /* AtmosphereState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36161C5D4D1909C9DE2DC99C /* AtmosphereState.swift */; };
+		6AA3512BF169369621098C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 540583185669580752C51290 /* Assets.xcassets */; };
+		AF4FEE1BA7FE4415BF746EAB /* OpenSkyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55611DBAAF5C0B07027FA78 /* OpenSkyService.swift */; };
+		B8695EC970EE63E90D074E07 /* RadarMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D47E7B70EB2A6BFF9C5EE /* RadarMapView.swift */; };
+		C19176BCC2DD97572428517C /* SkyRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD04DE0BC93134B4A286D7 /* SkyRadarApp.swift */; };
+		C8F0FBF4ED5BA69B2746D7CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9EA32E0BFC0E3C915AB492 /* ContentView.swift */; };
+		C97827B96164DC6C14E6A0D2 /* RadarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3347AEA6D7F84C5377BFDBEF /* RadarViewModel.swift */; };
+		CD4C38D58BDE842AC32E5446 /* EngineeringComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4409B7B3A903FDFA3CDC50 /* EngineeringComputer.swift */; };
+		D5B2F2844131A76434B24218 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE02DF31A5495B7A8FCD8A3 /* Constants.swift */; };
+		E0F8CC310E7D088D27C7924A /* ISAComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABF964638F43F9B60ED5B9 /* ISAComputer.swift */; };
+		EFD51DFE20A3369CC9D3086B /* AircraftDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B0E10F723BF62743E5149E /* AircraftDetailSheet.swift */; };
+		F732C9333B81754501258759 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2533DD2B8F28C4AB81B459C7 /* Theme.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6A7F29F945F6CD58D9A01F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AC0476EAC1EBBB7236846C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D6FCA9BC24D2559B28E8AD8;
+			remoteInfo = SkyRadar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		114F1D0D891A12B2A1B22E3F /* AircraftRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftRow.swift; sourceTree = "<group>"; };
+		1D4409B7B3A903FDFA3CDC50 /* EngineeringComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineeringComputer.swift; sourceTree = "<group>"; };
+		22ABF964638F43F9B60ED5B9 /* ISAComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISAComputer.swift; sourceTree = "<group>"; };
+		2533DD2B8F28C4AB81B459C7 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		28DD04DE0BC93134B4A286D7 /* SkyRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyRadarApp.swift; sourceTree = "<group>"; };
+		2FFF13B38987EE19B161BC97 /* SkyRadarTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SkyRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3347AEA6D7F84C5377BFDBEF /* RadarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarViewModel.swift; sourceTree = "<group>"; };
+		36161C5D4D1909C9DE2DC99C /* AtmosphereState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphereState.swift; sourceTree = "<group>"; };
+		540583185669580752C51290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E9EA32E0BFC0E3C915AB492 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		70B0E10F723BF62743E5149E /* AircraftDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftDetailSheet.swift; sourceTree = "<group>"; };
+		8AE02DF31A5495B7A8FCD8A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		994A9DE95A690CB0A5042490 /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
+		99C57623057E9BF21EC954D1 /* SkyRadar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyRadar.entitlements; sourceTree = "<group>"; };
+		A7D1E8A5A87CCF0CBD75B13C /* EngineeringComputerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineeringComputerTests.swift; sourceTree = "<group>"; };
+		BEC74DE5C9CA81ABF68C2450 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		C5450250472138B46E55BE83 /* SkyRadar.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SkyRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55611DBAAF5C0B07027FA78 /* OpenSkyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyService.swift; sourceTree = "<group>"; };
+		D59D47E7B70EB2A6BFF9C5EE /* RadarMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarMapView.swift; sourceTree = "<group>"; };
+		FF84D7B34DF6B62BB071CF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		11736F778138FBC0AD8F2FAA /* SkyRadarTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E8A5A87CCF0CBD75B13C /* EngineeringComputerTests.swift */,
+			);
+			path = SkyRadarTests;
+			sourceTree = "<group>";
+		};
+		1E8E22C03BBB2606CD586C9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				994A9DE95A690CB0A5042490 /* Aircraft.swift */,
+				36161C5D4D1909C9DE2DC99C /* AtmosphereState.swift */,
+				8AE02DF31A5495B7A8FCD8A3 /* Constants.swift */,
+				1D4409B7B3A903FDFA3CDC50 /* EngineeringComputer.swift */,
+				22ABF964638F43F9B60ED5B9 /* ISAComputer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		294A04FBE5B4E03F4197765D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70B0E10F723BF62743E5149E /* AircraftDetailSheet.swift */,
+				114F1D0D891A12B2A1B22E3F /* AircraftRow.swift */,
+				5E9EA32E0BFC0E3C915AB492 /* ContentView.swift */,
+				D59D47E7B70EB2A6BFF9C5EE /* RadarMapView.swift */,
+				2533DD2B8F28C4AB81B459C7 /* Theme.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38CB76726D6FFD50A927D5C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5450250472138B46E55BE83 /* SkyRadar.app */,
+				2FFF13B38987EE19B161BC97 /* SkyRadarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8567BF7D723BB0D8E733D79C /* SkyRadar */ = {
+			isa = PBXGroup;
+			children = (
+				540583185669580752C51290 /* Assets.xcassets */,
+				FF84D7B34DF6B62BB071CF06 /* Info.plist */,
+				99C57623057E9BF21EC954D1 /* SkyRadar.entitlements */,
+				28DD04DE0BC93134B4A286D7 /* SkyRadarApp.swift */,
+				1E8E22C03BBB2606CD586C9E /* Models */,
+				85D148AD78D925A83D9D8E0A /* Resources */,
+				D4329F4CE1BB519F72A49472 /* Services */,
+				E816FF5AF0F1A046CBC889CF /* ViewModels */,
+				294A04FBE5B4E03F4197765D /* Views */,
+			);
+			path = SkyRadar;
+			sourceTree = "<group>";
+		};
+		85D148AD78D925A83D9D8E0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D4329F4CE1BB519F72A49472 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BEC74DE5C9CA81ABF68C2450 /* LocationService.swift */,
+				C55611DBAAF5C0B07027FA78 /* OpenSkyService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E816FF5AF0F1A046CBC889CF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3347AEA6D7F84C5377BFDBEF /* RadarViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FDFC178D75E2D3D0E4D5C097 = {
+			isa = PBXGroup;
+			children = (
+				8567BF7D723BB0D8E733D79C /* SkyRadar */,
+				11736F778138FBC0AD8F2FAA /* SkyRadarTests */,
+				38CB76726D6FFD50A927D5C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FD0009CD755A765B1AD9E66 /* SkyRadarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84212F2FAE1D932B9439756C /* Build configuration list for PBXNativeTarget "SkyRadarTests" */;
+			buildPhases = (
+				C6650485DEB318E39F372AD6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5A95ACDF0D5316022E6E2D4 /* PBXTargetDependency */,
+			);
+			name = SkyRadarTests;
+			packageProductDependencies = (
+			);
+			productName = SkyRadarTests;
+			productReference = 2FFF13B38987EE19B161BC97 /* SkyRadarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3D6FCA9BC24D2559B28E8AD8 /* SkyRadar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 439F3B4C786281D3859C47FB /* Build configuration list for PBXNativeTarget "SkyRadar" */;
+			buildPhases = (
+				9CA7E07A4579752EE247A05C /* Sources */,
+				FC3CD7129E999B214C5A423E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyRadar;
+			packageProductDependencies = (
+			);
+			productName = SkyRadar;
+			productReference = C5450250472138B46E55BE83 /* SkyRadar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AC0476EAC1EBBB7236846C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					3D6FCA9BC24D2559B28E8AD8 = {
+						DevelopmentTeam = BUC6ASR452;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A9B557624399553AF6F08FFB /* Build configuration list for PBXProject "SkyRadar" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FDFC178D75E2D3D0E4D5C097;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 38CB76726D6FFD50A927D5C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D6FCA9BC24D2559B28E8AD8 /* SkyRadar */,
+				1FD0009CD755A765B1AD9E66 /* SkyRadarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC3CD7129E999B214C5A423E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AA3512BF169369621098C51 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CA7E07A4579752EE247A05C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FDDA56D1CD8E26720BE44DD /* Aircraft.swift in Sources */,
+				EFD51DFE20A3369CC9D3086B /* AircraftDetailSheet.swift in Sources */,
+				1D34520933C0C96911D21E7E /* AircraftRow.swift in Sources */,
+				5FD22EF0DEF0D63B1EBDF22B /* AtmosphereState.swift in Sources */,
+				D5B2F2844131A76434B24218 /* Constants.swift in Sources */,
+				C8F0FBF4ED5BA69B2746D7CF /* ContentView.swift in Sources */,
+				CD4C38D58BDE842AC32E5446 /* EngineeringComputer.swift in Sources */,
+				E0F8CC310E7D088D27C7924A /* ISAComputer.swift in Sources */,
+				4801C91AC269E4692D8F9B88 /* LocationService.swift in Sources */,
+				AF4FEE1BA7FE4415BF746EAB /* OpenSkyService.swift in Sources */,
+				B8695EC970EE63E90D074E07 /* RadarMapView.swift in Sources */,
+				C97827B96164DC6C14E6A0D2 /* RadarViewModel.swift in Sources */,
+				C19176BCC2DD97572428517C /* SkyRadarApp.swift in Sources */,
+				F732C9333B81754501258759 /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6650485DEB318E39F372AD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04D44D337CCCE95F237CBF5C /* EngineeringComputerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5A95ACDF0D5316022E6E2D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D6FCA9BC24D2559B28E8AD8 /* SkyRadar */;
+			targetProxy = F6A7F29F945F6CD58D9A01F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01D4F86BA86ACD682F696A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lielmachluf.SkyRadarTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SkyRadar";
+			};
+			name = Release;
+		};
+		10A3F9F690CCD0F96EE90D18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lielmachluf.SkyRadarTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SkyRadar";
+			};
+			name = Debug;
+		};
+		1792F152EFD879D567B3892A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		2F845932CC962FABFCA23AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkyRadar/SkyRadar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = BUC6ASR452;
+				INFOPLIST_FILE = SkyRadar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lielmachluf.skyradar;
+				PRODUCT_NAME = SkyRadar;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4FF71D96FD1F4840174F523B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkyRadar/SkyRadar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = BUC6ASR452;
+				INFOPLIST_FILE = SkyRadar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lielmachluf.skyradar;
+				PRODUCT_NAME = SkyRadar;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0BA74ACC944F4A5CBCFCCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		439F3B4C786281D3859C47FB /* Build configuration list for PBXNativeTarget "SkyRadar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF71D96FD1F4840174F523B /* Debug */,
+				2F845932CC962FABFCA23AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		84212F2FAE1D932B9439756C /* Build configuration list for PBXNativeTarget "SkyRadarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A3F9F690CCD0F96EE90D18 /* Debug */,
+				01D4F86BA86ACD682F696A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A9B557624399553AF6F08FFB /* Build configuration list for PBXProject "SkyRadar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0BA74ACC944F4A5CBCFCCDB /* Debug */,
+				1792F152EFD879D567B3892A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AC0476EAC1EBBB7236846C3 /* Project object */;
+}

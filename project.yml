@@ -1,0 +1,88 @@
+name: SkyRadar
+options:
+  bundleIdPrefix: com.lielmachluf
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: 1
+    GENERATE_INFOPLIST_FILE: true
+    SWIFT_EMIT_LOC_STRINGS: true
+
+targets:
+  SkyRadar:
+    type: application
+    platform: iOS
+    sources:
+      - SkyRadar
+    settings:
+      base:
+        PRODUCT_NAME: SkyRadar
+        PRODUCT_BUNDLE_IDENTIFIER: com.lielmachluf.skyradar
+        INFOPLIST_FILE: SkyRadar/Info.plist
+        DEVELOPMENT_ASSET_PATHS: ""
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: BUC6ASR452
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: true
+        SWIFT_STRICT_CONCURRENCY: complete
+    entitlements:
+      path: SkyRadar/SkyRadar.entitlements
+    info:
+      path: SkyRadar/Info.plist
+      properties:
+        CFBundleDisplayName: SkyRadar
+        UILaunchScreen: {}
+        NSLocationWhenInUseUsageDescription: "SkyRadar uses your location to show nearby aircraft and calculate distances."
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    dependencies: []
+
+  SkyRadarTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - SkyRadarTests
+    dependencies:
+      - target: SkyRadar
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.lielmachluf.SkyRadarTests
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/SkyRadar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SkyRadar"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+schemes:
+  SkyRadar:
+    build:
+      targets:
+        SkyRadar: all
+        SkyRadarTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - SkyRadarTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
